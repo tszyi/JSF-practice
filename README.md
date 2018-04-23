@@ -261,19 +261,27 @@ public class SomeBean {
 ## 一些測試，觀察num在不同Scope的變化
 承運行輸入完網址後，按下提交按鈕
 **NoneScopeBean的num不再遞增。**
+
 ![first-click](https://github.com/tszyi/JSF-practice/blob/master/READMEpicture/first-click.png)
+
 
 再按一次提交按鈕
 **ReqScopeBean的num不在遞增**
+
 ![second-click](https://github.com/tszyi/JSF-practice/blob/master/READMEpicture/second-click.png)
+
 
 開啟新的瀏覽器分頁(tab)
 **ViewScopeBean跟ReqScopeBean的num都變成1**
+
 ![new-tab](https://github.com/tszyi/JSF-practice/blob/master/READMEpicture/new-tab.png)
 
-關閉瀏覽器，但不關閉tomcat
+
+關閉瀏覽器，但不關閉tomcat，在重啟瀏覽器
 **AppScopeBean的num依然存在，其他都初始成1了**
+
 ![close-browser](https://github.com/tszyi/JSF-practice/blob/master/READMEpicture/close-browser.png)
+
 
 現在按下提交鈕三次：
 AppScopeBean: 6 
@@ -282,8 +290,11 @@ SessScopeBean: 4
 ViewScopeBean: 4 
 NoneScopeBean: 1 
 
+
 接著關閉tomcat，但不關閉瀏覽器，再重啟tomcat
 **SessScopeBean的num依然存在，其他都初始成1了**
+
 ![close-tomcat](https://github.com/tszyi/JSF-practice/blob/master/READMEpicture/close-tomcat.png)
+
 
 最後可試試開啟不同家的瀏覽器Firefox、Chrome、Opera，配合提交按鈕，來觀察num變數在Application Scope的影響。
